@@ -1,3 +1,5 @@
+<img alt="Chameleon" src="illustration.svg" align="right" width="98vw">
+
 _Chameleon_
 ===========
 Simple _[SVGO]_ [plugin] to change [`fill`] and [`stroke`] [attribute] colors.

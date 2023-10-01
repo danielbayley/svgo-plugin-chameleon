@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style type="text/css">
+    :root {
+      --green:  hsl(125, 85%,  60%);
+      --blue:   hsl(200, 100%, 55%);
+      --pink:   hsl(310, 80%,  65%);
+      --red:    hsl(360, 100%, 60%);
+      --orange: hsl(25,  100%, 60%);
+      --yellow: hsl(55,  100%, 60%);
+      --branch: #3A3F48
+    }
+    @keyframes camo {
+      from, to { fill: var(--green) }
+      20% { fill: var(--blue) }
+      33% { fill: var(--pink) }
+      50% { fill: var(--red) }
+      66% { fill: var(--orange) }
+      80% { fill: var(--yellow) }
+    }
+    #body { animation: camo 10s infinite }
+    .features {
+      fill: black;
+      opacity: 25%
+    }
+    .branch {
+      fill: none;
+      stroke: var(--branch);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+    #eye {
+      transform-origin: 44px 24px;
+      animation:
+        shift  2s alternate infinite ease-out,
+        rotate 4s alternate infinite ease-in-out
+    }
+    @keyframes shift {
+      from, 25% { transform: translate(4px, -4px) }
+      33% { transform: translate(0) }
+    }
+    @keyframes rotate {
+      to { transform: rotate(90deg) }
+    }
+  </style>
+  <path class="branch" d="M50 48h10"/>
+  <path id="body" d="M62 32C62 15.5 48.5 2 32 2c-1.1 0-2 .9-2 2v6.1c-.7-.1-1.3-.1-2-.1C13.7 10 2 21.7 2 36v12c0 7.7 6.3 14 14 14 5.5 0 10-4.5 10-10s-4.5-10-10-10c-3.3 0-6 2.7-6 6s2.7 6 6 6c1.1 0 2-.9 2-2s-.9-2-2-2-2-.9-2-2 .9-2 2-2c3.3 0 6 2.7 6 6s-2.7 6-6 6c-5.5 0-10-4.5-10-10s4.5-10 10-10c4.5 0 8.8 1.8 12 5l2.5 2.5c-1 2.2-.7 5 1.2 6.8.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6.8-.8.8-2 0-2.8-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8 2 .8 2.8 0 .8-.8.8-2 0-2.8-1.8-1.8-4.6-2.2-6.8-1.1l-2.6-2.5c-.8-.8-1.7-1.5-2.6-2.2h23l.1.1c1.2 1.2 1.5 2.9.9 4.4-2.2-.9-4.8-.5-6.5 1.3-.8.8-.8 2 0 2.8.8.8 2 .8 2.8 0 .8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-.8 2 0 2.8.4.4.9.6 1.4.6s1-.2 1.4-.6c1.9-1.9 2.2-4.7 1.1-7 1.4-2.2 1.6-4.9.7-7.3 3.5 0 6.2-2.7 6.2-6z"/>
+  <circle class="features" cx="44" cy="24" r="8"/>
+  <circle class="features" id="eye" cx="42" cy="26" r="2"/>
+  <circle class="features" cx="56" cy="30" r="2"/>
+  <path class="features" d="M12 32c1.1 0 2-.9 2-2V14.1c-1.4.9-2.8 2-4 3.2V30c0 1.1.9 2 2 2zm8 0c1.1 0 2-.9 2-2V10.7c-1.4.3-2.7.8-4 1.3v18c0 1.1.9 2 2 2zm8 0c1.1 0 2-.9 2-2V10.1c-.7-.1-1.3-.1-2-.1s-1.3 0-2 .1V30c0 1.1.9 2 2 2z"/>
+  <path class="branch" d="M50 48.1H35.9l6 6"/>
+</svg>
