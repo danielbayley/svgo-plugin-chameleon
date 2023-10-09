@@ -1,0 +1,56 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: CI
+on: #push #, pull_request]
+  push:
+    branches: [main]
+    #- main #, master
+    #- dev
+    #paths: "**.[cjt]s"
+    #- .github/workflows/*.y*ml
+    #- "**.rb"
+  #pull_request: TODO
+    #paths: "**.[cjt]s"
+    #- .github/workflows/*.y*ml
+    #- "**.rb"
+
+jobs:
+  CI: #${{ workflow.name }}
+    #runs-on: ubuntu-latest
+    #strategy:
+      #matrix:
+        #node-version: [18, 19, 20]
+
+    #name: TODO
+    uses: danielbayley/create-npm-package/.github/workflows/test.yml@main #/fabric/
+    # TODO https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit # https://github.com/actions/toolkit/issues/1168
+    #with:
+      #node-version: ${{ matrix.node-version }}
+      #node-versions: 18, 19, 20
+
+    #outputs:
+      #package-manager: ${{ jobs.CI.outputs.test }}
+
+
+    #steps:
+    #- name: Setup pnpm
+      #uses: danielbayley/create-npm-package@main
+      #with:
+        #node-version: ${{ matrix.node-version }}
+
+    #steps:
+    #- name: ${{ github.workflow }}
+      #uses: danielbayley/create-npm-package@main #${{ github.repository_owner }}/create-npm-package@main #${{ github.ref }} #_name }} #v1 TODO #/fabric@main
+      #env: #${{ github.repository }}@${{ TODO.branch }}
+        #ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
+      #secrets: inherit TODO
+      #with:
+        #node-version: ${{ matrix.node-version }}
+
+    #- TODO danielbayley/create-npm-package/.github/workflows/ci.yml@main
+
+  #TODO:
+    #needs: CI
+    #runs-on: ubuntu-latest
+    #steps:
+    #- run: ${{ needs.CI.outputs.package-manager }} TODO
