@@ -109,9 +109,9 @@ License
 [`stroke`]:           https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke
 [`currentcolor`]:     https://gomakethings.com/currentcolor-and-svgs
 
-[svgo]:               https://github.com/svg/svgo#readme
-[plugin]:             https://github.com/svg/svgo#configuration
-[`params`]:           https://github.com/svg/svgo#custom-plugin
+[svgo]:               https://svgo.dev/docs/introduction
+[plugin]:             https://svgo.dev/docs/plugins
+[`params`]:           https://github.com/svg/svgo#custom-plugins
 
 [node]:               https://nodejs.org
 [requires]:           https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines
